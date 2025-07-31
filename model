@@ -1,0 +1,93 @@
+local config = {}
+
+config.EFFECTS = {
+    { name = "purplespace", class = "ParticleEmitter", label = "METEOR" },
+    { name = "fireork", class = "ParticleEmitter", label = "FIREWORK" },
+    { name = "nyancattrail", class = "Trail", label = "NYAN CAT" },
+    { name = "_Trait.Taco", class = "Model", label = "TACO" },
+    { name = "_Trait.Zombie", class = "Model", label = "ZOMBIE" },
+    { name = "_Trait.Claws", class = "Model", label = "CLAWS" },
+    { name = "_Trait.Bubblegum", class = "Model", label = "BUBBLEGUM" },
+    { name = "Boxy Glitches", class = "ParticleEmitter", label = "GLITCH" },
+}
+
+config.SPECIAL_MODELS_THIRD = {
+    ["Los Tralaleritos"] = {requireEffect = true, Mutation = "Rainbow"},
+    ["Las Tralaleritas"] = {requireEffect = true, Mutation = "Rainbow"},
+    ["Graipuss Medussi"] = {requireEffect = true, Mutation = "Rainbow"},
+    ["La Grande Combinasion"] = {requireEffect = false, Mutation = nil},
+    ["Garama and Madundung"] = {requireEffect = false, Mutation = nil},
+    ["Pot Hotspot"] = {requireEffect = false, Mutation = nil},
+    ["Nuclearo Dinossauro"] = {requireEffect = false, Mutation = nil},
+    ["Las Vaquitas Saturnitas"] = {requireEffect = true, Mutation = "Rainbow"},
+    ["Chicleteira Bicicleteira"] = {requireEffect = false, Mutation = nil}
+}
+
+config.SPECIAL_MODELS_SECOND = {
+    ["Los Tralaleritos"] = {requireEffect = false},
+    ["Las Tralaleritas"] = {requireEffect = false},
+    ["Graipuss Medussi"] = {requireEffect = false},
+    ["La Grande Combinasion"] = {requireEffect = false},
+    ["Garama and Madundung"] = {requireEffect = false},
+    ["Pot Hotspot"] = {requireEffect = false},
+    ["Nuclearo Dinossauro"] = {requireEffect = false},
+    ["Las Vaquitas Saturnitas"] = {requireEffect = false},
+    ["La Vacca Saturno Saturnita"] = {requireEffect = false},
+    ["Chicleteira Bicicleteira"] = {requireEffect = false}
+}
+
+config.mutationColors = {
+    Gold = Color3.fromRGB(255, 215, 0),
+    Diamond = Color3.fromRGB(0, 255, 255),
+    Lava = Color3.fromRGB(255, 100, 0),
+    Bloodrot = Color3.fromRGB(255, 0, 0),
+    Candy = Color3.fromRGB(255, 182, 193),
+}
+
+config.WEBHOOK_TEMPLATES = {
+    default = {
+        embeds = {{
+            title = "Nameless Pet Notifier",
+            color = 5814783,
+            fields = {
+                {name = "👥 Players:", value = "", inline = true},
+                {name = "📱 Job-ID (Mobile):", value = ""},
+                {name = "💻 Job-ID (PC):", value = ""},
+                {name = "📲 Join (Mobile):", value = "-- paste to exec"},
+                {name = "🖥️ Join (PC):", value = "-- paste to exec"}
+            },
+            footer = {text = "Nameless Bot"}
+        }}
+    },
+    highGeneration = {
+        embeds = {{
+            title = "Nameless Pet Notifier",
+            color = 5814783,
+            fields = {
+                {name = "👥 Players:", value = "", inline = true},
+                {name = "📱 Job-ID (Mobile):", value = ""},
+                {name = "💻 Job-ID (PC):", value = ""},
+                {name = "📲 Join (Mobile):", value = "-- paste to exec"},
+                {name = "🖥️ Join (PC):", value = "-- paste to exec"}
+            },
+            footer = {text = "Buy premium for 1M+ links!"}
+        }}
+    },
+    special = {
+        embeds = {{
+            title = "Nameless Pet Notifier",
+            color = 5814783,
+            fields = {
+                {name = "👥 Players:", value = "", inline = true},
+                {name = "📱 Job-ID (Mobile):", value = ""},
+                {name = "💻 Job-ID (PC):", value = ""},
+                {name = "📲 Join (Mobile):", value = "-- paste to exec"},
+                {name = "🖥️ Join (PC):", value = "-- paste to exec"},
+                {name = "🔗 Server Link:", value = ""}
+            },
+            footer = {text = "Nameless Bot"}
+        }}
+    }
+}
+
+return config
